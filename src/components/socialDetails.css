@@ -1,0 +1,14 @@
+.socialDetailContainer{
+    margin-top: 20px;
+    display: flex;
+
+}
+
+.socialDetails{
+    margin-top: 10px;
+}
+.facebookDetails{
+    padding-top: 10px;
+    padding-left: 20px;
+    color: white;
+}

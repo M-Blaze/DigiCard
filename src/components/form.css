@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+.container2 {
+    width: 650px;
+    padding: 25px;
+    margin: 0 25px;
+    background: transparent;
+    overflow: hidden;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.container2 h2 {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: left;
+    color: black;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+
+.box-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+
+.social-link {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
+}
+
+.social-link input {
+    height: 40px;
+    width: 95%;
+    border-radius: 10px;
+    border: 1px solid black;
+    outline: none;
+    padding: 0 10px;
+}
+
+.social-link label {
+    width: 95%;
+    color: black;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.box-content label,
+.gender-title {
+    width: 95%;
+    color: black;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.gender-title {
+    font-size: 18px;
+}
+
+.box-content input {
+    height: 40px;
+    width: 95%;
+    border-radius: 10px;
+    border: 1px solid black;
+    outline: none;
+    padding: 0 10px;
+}
+
+.gender label {
+    padding: 0 20px 0 5px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.gender label,
+input:hover {
+    cursor: pointer;
+}
+
+.alert p {
+    font-size: 18px;
+    color: #fff;
+}
+
+.alert a {
+    text-decoration: none;
+    color: aqua;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.alert a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.button-container2 button {
+    width: 100%;
+    padding: 15px 0;
+    background-image: linear-gradient(to right, blue, skyblue);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.button-container2 button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, skyblue, blue);
+}
+
+.textArea {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.socialLinks {
+    width: 900px;
+}
+
+.socialMediaLink {
+    display: flex;
+}
+
+.socialMediaInput {
+    height: 40px;
+    width: 95%;
+
+    border: 1px solid black;
+    outline: none;
+    padding: 0 10px;
+
+}
+.socialMediaDrop{
+    height: 40px;
+    border: 1px solid black;
+    outline: none;
+    padding: 0 10px;
+
+}
+
+.socialLinksContainer{
+    padding: 20px;
+}
+
+
+.socialMediaContainer{
+    position: relative;
+    margin-top: 20px;
+    padding: 30px;
+    background-color: #f0f0ff;
+}
+.garbageCan{
+    cursor: pointer;
+    position: absolute;
+    top: -20px;
+    right: 50px;
+    width: 35px;
+    padding: 10px;
+    border-radius: 50%;
+    background: #f0f0ff;
+    color: black;
+}
+.addComponent{
+    margin-top: 30px;
+    cursor: pointer;
+    width: 155px;
+    background-color: white;
+    border-color: #4d77fa;
+    color: #4d77fa;
+    padding: 10px;
+    border-color: #4d77fa;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.addComponent:hover{
+    color: white;
+    background-color: #4d77fa;
+    border-radius: 5px;
+
+}
+
+.upload{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contactHeading{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.addIcon{
+    cursor: pointer;
+    margin-top: 5px;
+    font-size: 30px;
+}
+
+.addIcon:hover{
+    color: white;
+    background-color: black;
+}

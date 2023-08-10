@@ -1,0 +1,16 @@
+.labelHeader{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+
+.optionDropDown{
+    margin-top: 30px;
+    height: 30px;
+    font-size: 16px;
+    padding: 5px;
+    width: 150px;
+}
