@@ -1,6 +1,6 @@
 
 import './App.css';
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -8,7 +8,12 @@ import Register from './pages/Register'
 import CardPage from './pages/CardPage'
 import DashBoard from './pages/DashBoard';
 import Edit from './pages/Edit';
+
 function App() {
+  useEffect(() => {
+    document.title = "DigiCard"
+  }, [])
+
   return (
     <div className="App">
       <Routes>
@@ -18,7 +23,6 @@ function App() {
         <Route path='/digitalcardPage/:id' element={<CardPage />}></Route>
         <Route path='/dashBoard' element={<DashBoard />}></Route>
         <Route path='/edit/:id' element={<Edit />}></Route>
-
       </Routes>
     </div>
   );
