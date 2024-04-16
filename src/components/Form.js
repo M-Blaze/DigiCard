@@ -61,18 +61,18 @@ function Form(props) {
                     <h2>Digital Business Cards</h2>
                     <div className="content">
                         <div className="box-content">
-                            <label for="fullname">FullName</label>
+                            <label htmlFor="fullname">FullName</label>
                             <input value={fullName}
                                 onChange={handleInputChange} type="text" name='fullName' placeholder="Enter your FullName" ></input>
                         </div>
 
                         <div className="box-content">
-                            <label for="fullname">Position</label>
+                            <label htmlFor="fullname">Position</label>
                             <input value={position} onChange={handleInputChange} name='position' type="text" placeholder="Enter Username" required></input>
                         </div>
 
                         <div className="box-content">
-                            <label for="fullname">Company</label>
+                            <label htmlFor="fullname">Company</label>
                             <input type="text" value={company} onChange={handleInputChange} name="company" placeholder="Enter your Email" required></input>
                         </div>
                     </div>
@@ -85,11 +85,11 @@ function Form(props) {
                             <h1>About</h1>
                         </div>
                         <div className="social-link">
-                            <label for="fullname">Title</label>
+                            <label htmlFor="fullname">Title</label>
                             <input value={about} onChange={handleInputChange} type="Text" name="about" placeholder="Enter your Title" ></input>
                         </div>
                         <div className="social-link">
-                            <label for="fullname">Description</label>
+                            <label htmlFor="fullname">Description</label>
                             <textarea value={description} onChange={handleInputChange} rows="5" cols="85" type="Textfield" className='textArea' name="description" placeholder="Description" ></textarea>
                         </div>
                     </div>
@@ -119,11 +119,11 @@ function Form(props) {
                             <h1>Social Links</h1>
                         </div>
                         <div className="social-link">
-                            <label for="fullname">Title</label>
+                            <label htmlFor="fullname">Title</label>
                             <input type="Text" name="Fullname" placeholder="Enter your Title" ></input>
                         </div>
                         <div className="social-link">
-                            <label for="fullname">Description</label>
+                            <label htmlFor="fullname">Description</label>
                             <textarea rows="5" cols="85" type="Textfield" className='textArea' name="Fullname" placeholder="Description" ></textarea>
                         </div>
                         {socialLinks.map((social, index) => {
@@ -144,11 +144,11 @@ function Form(props) {
                                     </div>
                                     <div className="content">
                                         <div className="social-link">
-                                            <label for="fullname">Title</label>
+                                            <label htmlFor="fullname">Title</label>
                                             <input type="text" value={social.title} name="title" onChange={(e)=>handleFormChange(e,index)} placeholder="Enter your Link" ></input>
                                         </div>
                                         <div className="social-link">
-                                            <label for="fullname">Description</label>
+                                            <label htmlFor="fullname">Description</label>
                                             <input type="text" value={social.subtitle} name="subtitle"  onChange={(e)=>handleFormChange(e,index)} placeholder="Enter your Link" ></input>
                                         </div>
                                     </div>
