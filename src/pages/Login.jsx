@@ -10,12 +10,9 @@ function Login(props) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const navigate=useNavigate()
-
     const dispatch = useDispatch()
-
     const userLogin = useSelector((state) => state.userLogin)
     const {  userInfo } = userLogin
-
 
     useEffect(() => {
         if (userInfo) {
@@ -27,24 +24,25 @@ function Login(props) {
         e.preventDefault()
         dispatch(login(email, password))
     }
+    
     return (
         <>
             <div className='waraper'>
-                <div class="center">
+                <div className="center">
                     <h1>Login</h1>
                     <form method="post" onSubmit={submitHandler}>
-                        <div class="txt_field">
+                        <div className="txt_field">
                             <input onChange={(e)=> setEmail(e.target.value)} value={email} type="email" required />
                             <span></span>
                             <label>Email</label>
                         </div>
-                        <div class="txt_field">
+                        <div className="txt_field">
                             <input onChange={(e)=>setPassword(e.target.value)} value={password} type="password" required />
                             <span></span>
                             <label>Password</label>
                         </div>
                         <input type="submit" value="Login" />
-                        <div class="signup_link">
+                        <div className="signup_link">
                             Not a member? <Link to="/register">Signup</Link> 
                         </div>
                     </form>
