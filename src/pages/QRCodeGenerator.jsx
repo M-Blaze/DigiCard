@@ -7,19 +7,16 @@ const QRCodeGenerator = ({ url }) => {
         const svgElement = document.getElementById('qr-svg');
 
         saveSvgAsPng.saveSvgAsPng(svgElement, 'qrcode.png', {
-            backgroundColor: 'white', // Set a background color if necessary
+            backgroundColor: 'white',
             scale:10
         });
     };
 
     return (
         <div>
-            <QRCodeSVG
-                id="qr-svg"
-                value={url}
-                size={128}
-            />
-            <button onClick={downloadQRCode}>Download QR Code</button>
+            <QRCodeSVG id="qr-svg" value={url} size={128} />
+            <br />
+            <button style={{ marginTop: "10px" }} onClick={downloadQRCode}>Download QR Code</button>
         </div>
     );
 };
