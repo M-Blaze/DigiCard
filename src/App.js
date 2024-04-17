@@ -1,6 +1,6 @@
 
 import './App.css';
-import React, { useEffect } from "react";
+import React from "react";
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -10,10 +10,6 @@ import DashBoard from './pages/DashBoard';
 import Edit from './pages/Edit';
 
 function App() {
-  useEffect(() => {
-    document.title = "DigiCard"
-  }, [])
-
   return (
     <div className="App">
       <Routes>
