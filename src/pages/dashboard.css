@@ -11,13 +11,6 @@ h2 {
     margin-top: 40px;
 }
 
-.tableContainer {
-    /* Set a fixed height for the container to enable scrolling */
-    max-height: 400px;
-    overflow-y: scroll;
-    /* Enable vertical scrolling */
-}
-
 table {
     margin: auto;
     width: 50%;
@@ -38,10 +31,6 @@ table thead th {
 table tbody tr td {
     padding: 10px 16px;
     border-bottom: 1px solid #eee;
-}
-
-table tbody tr .action {
-    display: flex;
 }
 
 table tbody tr .action button {
