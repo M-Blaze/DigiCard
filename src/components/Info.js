@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import EDMPhoto from "../images/emanuele-del-monte.jpg";
 import './info.css'
-import {imagefrombuffer} from 'imagefrombuffer'
+import React from "react";
+import EDMPhoto from "../images/emanuele-del-monte.jpg";
 export default function Info(props) {
 
   const { fullName, position, company, selectedFile } = props
@@ -31,43 +30,7 @@ export default function Info(props) {
       </div>
       <h1 className="info--fullname">{fullName}</h1>
       <h5 className="info--role">{position}</h5>
-      <p className="info--website">
-        <a
-          className="info--websiteLink"
-          href="https://www.emanueledelmonte.it"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {company}
-        </a>
-      </p>
-      <div>
-
-        {/* <button onClick={handleUpload}>Upload</button> */}
-        {/* You can also display a preview of the selected image */}
-
-      </div>
-      {/* <div className="info--buttons">
-        <address>
-          <a href="#">
-            {" "}
-            <button className="button button--email">
-              <FontAwesomeIcon icon={faEnvelope} className="info--icon" />
-              Email
-            </button>
-          </a>
-        </address>
-        <a
-          href="https://www.linkedin.com/in/piyush-shakya/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="button button--linkedin">
-            <FontAwesomeIcon icon={faLinkedin} className="info--icon" />
-            LinkedIn
-          </button>
-        </a>
-      </div> */}
+      <p className="info--website info--websiteLink">{company}</p>
     </div>
   );
 }

@@ -3,8 +3,9 @@
     display: flex;
     overflow: hidden;
     background-color: #f1f1f1;
-    padding: 20px 10px;
+    padding: 5px 10px;
     justify-content: space-between;
+    align-items: center;
   }
   
   /* Style the header links */
@@ -21,10 +22,11 @@
   }
   
   /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-  .header a.logo {
-    font-size: 25px;
+  .header .logo {
+    font-size: 35px;
     font-weight: bold;
   }
+  
   .logout{
     cursor: pointer;
   }
