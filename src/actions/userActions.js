@@ -17,9 +17,7 @@ export const login = (email, password) => async (dispatch) => {
             }
         }
 
-        const { data } = await axios.post('http://192.168.1.14:5000/login', { email, password }, config)
-
-        console.log(data)
+        const { data } = await axios.post('/login', { email, password }, config)
 
         dispatch({
             type: USER_LOGIN_SUCCESS,
@@ -53,11 +51,7 @@ export const register = (name, email, password) => async (dispatch) => {
             },
         }
 
-        const { data } = await axios.post(
-            'http://192.168.1.14:5000/signup',
-            { name, email, password },
-            config
-        )
+        const { data } = await axios.post('/signup', { name, email, password }, config)
 
         dispatch({
             type: USER_REGISTER_SUCCESS,

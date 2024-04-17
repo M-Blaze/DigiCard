@@ -1,7 +1,6 @@
 import React from 'react';
 import ContactDetails from "../components/ContactDetails";
 import About from "../components/About";
-import Footer from "../components/Footer";
 import SocialDetails from '../components/SocialDetails';
 import Form from '../components/Form';
 import { useState } from 'react';
@@ -74,8 +73,7 @@ function Edit(props) {
                     },
                 }
 
-                const response = await axios.put(`http://192.168.1.14:5000/edit/${id}`, editData,config);
-                console.log('Updated digiCard:', response.data);
+                await axios.put(`/edit/${id}`, editData,config);
                 navigate('/dashboard')
                 // Optionally, show a success message or redirect to another page
             } catch (error) {
@@ -83,10 +81,7 @@ function Edit(props) {
                 // Show an error message to the user
             }
         }
-
     };
-
-
 
     useEffect(() => {
     }, [contactDetails, socialLinks, fullName, position, userInfo]);
@@ -128,7 +123,6 @@ function Edit(props) {
                         <ContactDetails contactDetails={contactDetails} />
                         <SocialDetails socialTitle={socialTitle} socialDesc={socialDesc} socialLinks={socialLinks} />
                     </div>
-                    <Footer />
 
                 </div>
 
