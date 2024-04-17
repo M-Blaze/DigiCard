@@ -12,7 +12,6 @@ export default function SocialDetails(props) {
     Skype: faSkype,
     Viber: faViber,
     LinkedIn: faLinkedin
-    // Add more social types and their corresponding icons here
   };
 
 
@@ -26,22 +25,21 @@ export default function SocialDetails(props) {
         </p>
       </div>
       <div className="socialDetails">
-        {socialLinks.map((link, index) => (
-          <div key={index} className="socialDetailContainer">
-            <div>
-              {/* Render the social icon based on the type */}
-              {socialIconMapping[link.type] && (
-                <a href={link.url} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon style={{ fontSize: 50, color: '#918e9b' }} icon={socialIconMapping[link.type]} /></a>
-              )}
-              {/* Add more conditions for other social types if needed */}
+        {
+          socialLinks.map((link, index) => (
+            <div key={index} className="socialDetailContainer">
+              <div>
+                {socialIconMapping[link.type] && (
+                  <a href={link.url} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon style={{ fontSize: 50, color: '#918e9b' }} icon={socialIconMapping[link.type]} /></a>
+                )}
+              </div>
+              <div className="facebookDetails">
+                <h4>{link.title}</h4>
+                <p>{link.subtitle}</p>
+              </div>
             </div>
-            <div className="facebookDetails">
-              {/* Render the social title and subtitle */}
-              <h4>{link.title}</h4>
-              <p>{link.subtitle}</p>
-            </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   );

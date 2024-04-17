@@ -25,7 +25,6 @@ function SocialLinks(props) {
         setSocialLinks(data)
     }
     const addFields = () => {
-        console.log(socialLinks)
         let object = { type: 'Facebook', url: '', title: 'Facebook', subtitle: 'Follow us on Facebook' }
         setSocialLinks([...socialLinks, object])
     }
@@ -48,11 +47,11 @@ function SocialLinks(props) {
         <div className='socialLinksContainer'>
            
             <div className="social-link">
-                <label for="fullname">Title</label>
+                <label htmlFor="fullname">Title</label>
                 <input value={socialTitle} onChange={handleInputChange} type="Text" name="socialTitle" placeholder="Enter your Title" ></input>
             </div>
             <div className="social-link">
-                <label for="fullname">Description</label>
+                <label htmlFor="fullname">Description</label>
                 <textarea value={socialDesc} onChange={handleInputChange} rows="5" cols="85" type="Textfield" className='textArea' name="socialDesc" placeholder="Description" ></textarea>
             </div>
             {socialLinks.map((social, index) => {
@@ -73,16 +72,15 @@ function SocialLinks(props) {
                         </div>
                         <div className="content">
                             <div className="social-link">
-                                <label for="fullname">Title</label>
-                                <input type="text" value={social.title} name="title" onChange={(e) => handleFormChange(e, index)} placeholder="Enter your Link" ></input>
+                                <label htmlFor="fullname">Title</label>
+                                <input type="text" value={social.title} name="title" onChange={(e) => handleFormChange(e, index)} ></input>
                             </div>
                             <div className="social-link">
-                                <label for="fullname">Description</label>
-                                <input type="text" value={social.subtitle} name="subtitle" onChange={(e) => handleFormChange(e, index)} placeholder="Enter your Link" ></input>
+                                <label htmlFor="fullname">Description</label>
+                                <input type="text" value={social.subtitle} name="subtitle" onChange={(e) => handleFormChange(e, index)} ></input>
                             </div>
                         </div>
                     </div>
-
                 )
             })}
 
