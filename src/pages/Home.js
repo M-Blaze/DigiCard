@@ -2,7 +2,6 @@ import React from 'react';
 
 import ContactDetails from "../components/ContactDetails";
 import About from "../components/About";
-import Footer from "../components/Footer";
 import SocialDetails from '../components/SocialDetails';
 import Form from '../components/Form';
 import { useState } from 'react';
@@ -15,7 +14,7 @@ import Info2 from '../components/Info2';
 
 
 import './home.css'
-function Home(props) {
+function Home() {
     const [fullName, setFullName] = useState('John doe')
     const [position, setPosition] = useState('position')
     const [company, setCompany] = useState('xyzCompany')
@@ -67,7 +66,6 @@ function Home(props) {
                     socialLinks,
                     selectedFile,
                 };
-                console.log(data)
                 const config = {
                     headers: {
                         'Content-Type': 'multipart/form-data',
@@ -75,13 +73,10 @@ function Home(props) {
                     },
                 }
 
-                const response = await axios.post('http://192.168.1.14:5000/createDigicard', data,config);
-                console.log(response)
+                await axios.post('/createDigicard', data,config);
                 navigate('/dashboard')
-                // Optionally, show a success message or redirect to another page
             } catch (error) {
                 console.error('Error saving profile:', error);
-                // Show an error message to the user
             }
         }
 
@@ -96,8 +91,8 @@ function Home(props) {
         <>
             <Navbar></Navbar>
             <div className='uiDesign'>
-                <div>
-                    <div><Form
+                <div className='form-wrap'>
+                    <Form
                         position={position}
                         setPosition={setPosition}
                         fullName={fullName}
@@ -120,7 +115,6 @@ function Home(props) {
                         setSocialDesc={setSocialDesc}
                         handleSubmit={handleSubmit}
                     />
-                    </div>
                 </div>
                 <div className='cardDesign'>
                     <Info2 selectedFile={selectedFile} position={position} fullName={fullName} company={company} />
@@ -129,8 +123,6 @@ function Home(props) {
                         <ContactDetails contactDetails={contactDetails} />
                         <SocialDetails socialTitle={socialTitle} socialDesc={socialDesc} socialLinks={socialLinks} />
                     </div>
-                    <Footer />
-
                 </div>
 
             </div>

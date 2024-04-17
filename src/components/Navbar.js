@@ -14,24 +14,34 @@ function Navbar(props) {
     }
 
     return (
-        <div>
-            {userInfo ? <>
-                <div class="header">
-                    <div href="#default" class="logo">Home</div>
-                    <div class="header-right">
-                        <Link to="/dashboard"><div class="active" href="#home">Go to DashBoard</div></Link> 
-                        <div className='logout' onClick={logOut}>Log Out</div>
-                    </div>
-                </div>
-            </>
-                : <div class="header">
-                    <a href="#default" class="logo">Home</a>
-                    <div class="header-right">
-                        <Link to="/login"><div class="active" href="#home">Sign in</div></Link> 
-                        <Link to='/register'><div  className='logout'>Sign up</div></Link> 
-                    </div>
-                </div>}
-        </div>
+			<div className="header">
+				<div className="logo">
+					<Link to="/">DigiCard</Link>
+				</div>
+				<div className="header-right">
+					{ 
+						userInfo ? 
+						(
+							<>
+								<Link to="/dashboard">
+									<div className="active" style={{ marginRight: "10px" }}>Go to DashBoard</div>
+								</Link> 
+								<div className='logout' onClick={logOut}>Log Out</div>
+							</>
+						) :
+						(
+							<>
+								<Link to="/login">
+									<div className="active" style={{ marginRight: "10px" }}>Sign in</div>
+								</Link> 
+								<Link to='/register'>
+									<div  className='logout'>Sign up</div>
+								</Link> 
+							</>
+						)
+					}
+				</div>
+			</div>
     );
 }
 
